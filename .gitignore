@@ -1,7 +1,6 @@
 *.swp
 build
 lib
-*.pdf
 *.aux 
 *.bbl 
 *.log 

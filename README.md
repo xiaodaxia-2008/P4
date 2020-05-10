@@ -173,7 +173,9 @@ The theoretical documentation is written in LaTex. Latex must be installed
 before building the pdf.
 
 ```bash
+sudo apt install texlive
 cd doc/tex
+wget http://tug.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/bibtex/IEEEtran.bst  # if need
 make
 # open main.pdf
 ```
