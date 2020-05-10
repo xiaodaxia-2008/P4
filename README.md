@@ -115,8 +115,9 @@ sudo apt install libboost-all-dev gnuplot
 
 If the installation instructions from OSQP's website are not working properly, follow the guidelines below:
 ```
-git clone https://github.com/oxfordcontrol/osqp
-cd osqp
+# git clone https://github.com/oxfordcontrol/osqp
+# cd osqp
+# Update submodule in P4 dependecies
 git submodule update --init --recursive
 mkdir build
 cd build

@@ -41,6 +41,25 @@ IF(Boost_FOUND AND BUILD_3D_EXAMPLE)
   target_compile_options(3D PRIVATE 
     -Wfatal-errors
   )
+
+  ####### another example ##########
+  add_executable(NJoint NJoint.cc gnuplot-iostream.h)
+  target_link_libraries(NJoint 
+    lib_p4
+    ${Boost_LIBRARIES} 
+    Eigen3::Eigen
+    osqp::osqpstatic
+  )
+  
+  set_target_properties(NJoint PROPERTIES
+    CXX_STANDARD 11
+    CXX_STANDARD_REQUIRED YES
+    CXX_EXTENSIONS NO
+  )
+  
+  target_compile_options(NJoint PRIVATE 
+    -Wfatal-errors
+  )
 ELSE()
   MESSAGE("3D example disabled.")
 ENDIF()
