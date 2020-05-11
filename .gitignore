@@ -8,3 +8,4 @@ lib
 *.dvi 
 *.ps 
 *.out
+.vscode

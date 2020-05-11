@@ -11,8 +11,10 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
-set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/dependencies/osqp/build)
-set(osqp_DIR ${CMAKE_SOURCE_DIR}/dependencies/osqp/build)
+# set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/dependencies/osqp/build)
+set(osqp_DIR $ENV{HOME}/Rvbust/Install/osqp/lib/cmake/osqp)
 
+set(CMAKE_INSTALL_PREFIX $ENV{HOME}/Rvbust/Install/P4)
 add_subdirectory(src)
 add_subdirectory(examples)
+install(FILES P4Config.cmake DESTINATION cmake)
