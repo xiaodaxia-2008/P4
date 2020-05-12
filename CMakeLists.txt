@@ -11,6 +11,9 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
+set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native -mavx2 -O3") # enable AVX2 and higher optimization 
+
 # set(Eigen3_DIR ${CMAKE_SOURCE_DIR}/dependencies/osqp/build)
 set(osqp_DIR $ENV{HOME}/Rvbust/Install/osqp/lib/cmake/osqp)
 
